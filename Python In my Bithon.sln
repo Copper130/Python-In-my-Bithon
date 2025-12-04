@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python In my Bithon", "Python In my Bithon\Python In my Bithon.pyproj", "{5401D4F8-83CC-4ADF-B5C8-216B44AD12E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5401D4F8-83CC-4ADF-B5C8-216B44AD12E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5401D4F8-83CC-4ADF-B5C8-216B44AD12E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63C12DEF-74F5-44DD-A256-85A94EFF29CE}
+	EndGlobalSection
+EndGlobal
