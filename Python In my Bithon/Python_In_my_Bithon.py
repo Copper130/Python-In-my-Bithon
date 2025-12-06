@@ -68,3 +68,13 @@ cls()
 print("Yay User Input Time!")
 time.sleep(2)
 print("We are going to play Basic Rock Paper Scissors")
+Player_Move = input("Enter your move (rock, paper or scissors. This is case sensitve): ")
+print(Player_Move)
+
+
+if Player_Move == "rock":
+    print("I pick Scissors You win!")
+elif Player_Move == "paper":
+    print("I pick Scissors You lose :(")
+elif Player_Move == "scissors":
+    print("I pick Scissors Its a tie!")
