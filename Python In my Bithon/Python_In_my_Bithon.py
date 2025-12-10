@@ -56,25 +56,31 @@ x = b"Hello"	                                #bytes
 x = bytearray(5)	                            #bytearray	
 x = memoryview(bytes(5))	                    #memoryview	
 x = None                                        #NoneType
-# You can also specify the data type you want by [type name](value) e.g., x = str("Hello World") thats called a constructor
+# You can also specify the data type you want by type_name(value) e.g., x = str("Hello World") thats called a constructor
 
 print("\nThere are lots of data types so I am not printing each one.")
 time.sleep(1)
 print("\nEnd of Data Types Demonstration!")
-time.sleep(2)
+time.sleep(1)
 cls()
 
 # User Input!
 print("Yay User Input Time!")
 time.sleep(2)
 print("We are going to play Basic Rock Paper Scissors")
-Player_Move = input("Enter your move (rock, paper or scissors. This is case sensitve): ")
-print(Player_Move)
+
+Possible_Moves = ["Rock", "Paper", "Scissors"]
+
+Player_Move = input("Enter your move (rock = 1 ,p = 2 ,s = 3. Please only time a number from 1-3): ")
+
+print(f"You Picked {Possible_Moves[int(Player_Move)+1]}!")
 
 
-if Player_Move == "rock":
+if Player_Move == "r":
     print("I pick Scissors You win!")
-elif Player_Move == "paper":
+elif Player_Move == "p":
     print("I pick Scissors You lose :(")
-elif Player_Move == "scissors":
+elif Player_Move == "s":
     print("I pick Scissors Its a tie!")
+    
+
