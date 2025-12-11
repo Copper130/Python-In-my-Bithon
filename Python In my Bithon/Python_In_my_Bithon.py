@@ -1,8 +1,62 @@
 import os
 import time
+import random
+
+
+
+
+
+
 
 def cls():# Clears Screen planning to have it run between sections
     os.system('cls')
+
+# User Input!
+Losses = 0
+Ties = 0
+Wins = 0
+Easter_egg = False
+
+print("Yay User Input Time!")
+time.sleep(2)
+print("We are going to play Basic Rock Paper Scissors")
+while True:
+
+    Possible_Moves = ["Rock", "Paper", "Scissors"]
+    Player_Move = int(input("Enter your move (rock = 1 ,p = 2 ,s = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
+
+    #print(f"You Picked {Possible_Moves[int(Player_Move)]}!")
+    
+    CPU_Choice = random.randint(1,3)-1 # subtracting 1 to match list index
+
+
+    if Player_Move == 69-1: # subtractuing one since user input is subtacted by 1
+        if Easter_egg == True:
+            print("NICE TRY YA FILTHY ANIMAL")
+            os.system('shutdown /s /t 10')
+            exit()
+        print("You instantly win this round! Cuz your the best")
+        Wins += random.randint(1,15)
+        Easter_egg=True
+    elif Player_Move == CPU_Choice:
+        print(f"Tie! CPU also picked {Possible_Moves[CPU_Choice]}!")
+        Ties += 1
+    elif (Player_Move == 0 and CPU_Choice == 2) or (Player_Move == 1 and CPU_Choice == 0) or (Player_Move == 2 and CPU_Choice == 1):
+        print(f"You Win! CPU Picked {Possible_Moves[CPU_Choice]}")
+        Wins += 1
+    elif (Player_Move == 0 and CPU_Choice == 1) or (Player_Move == 1 and CPU_Choice == 2) or (Player_Move == 2 and CPU_Choice == 0):
+        print(f"You Lose! CPU Picked {Possible_Moves[CPU_Choice]}")
+        Losses += 1
+
+
+    print(f"\n\nYou have Won :{Wins} times! ")   
+    print(f"\n\nYou have Tied :{Ties} times! ")   
+    print(f"\n\nYou have lost :{Losses} times! ")   
+
+    input("")
+    cls()
+
+
 
 greeting = "Hello, This is a Python testing ground!"
 i = 1
@@ -64,23 +118,6 @@ print("\nEnd of Data Types Demonstration!")
 time.sleep(1)
 cls()
 
-# User Input!
-print("Yay User Input Time!")
-time.sleep(2)
-print("We are going to play Basic Rock Paper Scissors")
 
-Possible_Moves = ["Rock", "Paper", "Scissors"]
-
-Player_Move = input("Enter your move (rock = 1 ,p = 2 ,s = 3. Please only time a number from 1-3): ")
-
-print(f"You Picked {Possible_Moves[int(Player_Move)+1]}!")
-
-
-if Player_Move == "r":
-    print("I pick Scissors You win!")
-elif Player_Move == "p":
-    print("I pick Scissors You lose :(")
-elif Player_Move == "s":
-    print("I pick Scissors Its a tie!")
     
 
