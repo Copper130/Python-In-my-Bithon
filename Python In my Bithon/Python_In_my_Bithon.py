@@ -1,10 +1,7 @@
 import os
 import time
 import random
-
-
-
-
+from wsgiref.simple_server import demo_app
 
 
 
@@ -20,30 +17,39 @@ Easter_egg = False
 print("Yay User Input Time!")
 time.sleep(2)
 print("We are going to play Basic Rock Paper Scissors")
+
 while True:
 
     Possible_Moves = ["Rock", "Paper", "Scissors"]
-    Player_Move = int(input("Enter your move (rock = 1 ,p = 2 ,s = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
+    Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
 
     #print(f"You Picked {Possible_Moves[int(Player_Move)]}!")
     
-    CPU_Choice = random.randint(1,3)-1 # subtracting 1 to match list index
+    CPU_Choice = random.randint(0,2)
 
-
-    if Player_Move == 69-1: # subtractuing one since user input is subtacted by 1
+    if Player_Move == 420-1: # subtractuing one since user input is subtacted by 1 so if the user inputs 420 it becomes 419
+        print("Exiting Game!")
+        time.sleep(1)        
+        break
+    
+    elif Player_Move == 69-1: # subtractuing one since user input is subtacted by 1 so if the user inputs 69 it becomes 68
+    
         if Easter_egg == True:
             print("NICE TRY YA FILTHY ANIMAL")
-            os.system('shutdown /s /t 10')
+            #os.system('shutdown /s /t 10') # Commented out because it was mad annoying >W<
             exit()
         print("You instantly win this round! Cuz your the best")
         Wins += random.randint(1,15)
         Easter_egg=True
+    
     elif Player_Move == CPU_Choice:
         print(f"Tie! CPU also picked {Possible_Moves[CPU_Choice]}!")
         Ties += 1
+    
     elif (Player_Move == 0 and CPU_Choice == 2) or (Player_Move == 1 and CPU_Choice == 0) or (Player_Move == 2 and CPU_Choice == 1):
         print(f"You Win! CPU Picked {Possible_Moves[CPU_Choice]}")
         Wins += 1
+    
     elif (Player_Move == 0 and CPU_Choice == 1) or (Player_Move == 1 and CPU_Choice == 2) or (Player_Move == 2 and CPU_Choice == 0):
         print(f"You Lose! CPU Picked {Possible_Moves[CPU_Choice]}")
         Losses += 1
@@ -58,7 +64,7 @@ while True:
 
 
 
-greeting = "Hello, This is a Python testing ground!"
+greeting = "\nHello, This is a Python testing ground!"
 i = 1
 number_of_loops = 5
 print(greeting)
@@ -70,6 +76,8 @@ for i in range(i,number_of_loops+1):
 print("End of the loop!")
 time.sleep(2)
 
+
+'''
 # Basic Operations 
 print("\n\n\nBasic Python Operations Demonstration")
 a = 15
@@ -92,6 +100,8 @@ print("Exponentiation:", exponentiation) # standard exponentiation
 print("\nEnd of Basic Operations Demonstration!")
 time.sleep(2)
 
+
+
 # Data Types
 print("\n\nData Types Demonstration!")
 
@@ -111,13 +121,26 @@ x = bytearray(5)	                            #bytearray
 x = memoryview(bytes(5))	                    #memoryview	
 x = None                                        #NoneType
 # You can also specify the data type you want by type_name(value) e.g., x = str("Hello World") thats called a constructor
-
+'''
 print("\nThere are lots of data types so I am not printing each one.")
 time.sleep(1)
 print("\nEnd of Data Types Demonstration!")
 time.sleep(1)
 cls()
 
+# Lists and Tuples :p
+print("Lists and Tuples Demonstration!")
+Demo_List = ['Adrianna', 'Conner' , '42']
+user_list_check = input("Please enter a value(str) to check if its in the demo list: ")
+if user_list_check in Demo_List:
+    print(f"{user_list_check} is in the Demo List!")
+print(f"{Demo_List[-1]} is the final entry in the Demo List") # indexing -1 will provide the last entry in a list
+print(Demo_List[1:2])# Outputs a range of values from the list. x:y where x is the starting index and y is the ending index (not inclusive) Can be negative too
+print("Demo List Length is:", len(Demo_List))
+#Modifying Lists
 
-    
+Demo_List.append('George') # Adds values to the end of a list
+Demo_List += ['Charlie'] # You can add a list to a list too If you dont have [] it will add each letter as an individual entry
+Demo_List.extend(['Dylan']) # You can also use .extend
+Demo_List.insert(1,'Im Out of Names') # Inserts value at specified index shifting other values to the right
 
