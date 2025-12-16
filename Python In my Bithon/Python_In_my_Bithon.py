@@ -1,7 +1,6 @@
 import os
 import time
 import random
-from wsgiref.simple_server import demo_app
 
 
 
@@ -15,10 +14,10 @@ Wins = 0
 Easter_egg = False
 
 print("Yay User Input Time!")
-time.sleep(2)
+time.sleep(1)
 print("We are going to play Basic Rock Paper Scissors")
 
-while True:
+while False: #set to false to skip the game for now
 
     Possible_Moves = ["Rock", "Paper", "Scissors"]
     Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
@@ -142,5 +141,29 @@ print("Demo List Length is:", len(Demo_List))
 Demo_List.append('George') # Adds values to the end of a list
 Demo_List += ['Charlie'] # You can add a list to a list too If you dont have [] it will add each letter as an individual entry
 Demo_List.extend(['Dylan']) # You can also use .extend
-Demo_List.insert(1,'Im Out of Names') # Inserts value at specified index shifting other values to the right
+Demo_List.insert(1,'Im out of Names') # Inserts value at specified index shifting other values to the right
+Demo_List[1:1] = ['James'] # Another way to insert value at specified index shifting other values to the right
+Demo_List[1:2] = ['Sophia'] # Replaces value at specified index range
+Demo_List.remove('Sophia') # Removes specified value
+Demo_List.pop() # Removes last value can also be used to remove value at specified index e.g., Demo_List.pop(1)
+#Demo_List.clear() # Empties the entire list
+#del Demo_List # Deletes entire list or value at specified index 
+Demo_List.sort() # Sorts list in ascending order
+print(Demo_List)
 
+# Tuples are immutable meaning they cannot be changed after creation
+# They are const, Lists are not
+Tuple_Loopule = ('Red', 'Green', 'Blue')
+Another_Tuple = tuple(('Circle', 'Square', 'Triangle'))
+
+
+
+
+# Dictionaries and sets
+MyCar = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 2006,
+  "Transmission": "5 Speed Manual"
+}
+print(MyCar)
