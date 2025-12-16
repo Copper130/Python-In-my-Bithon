@@ -13,12 +13,12 @@ Losses = 0
 Ties = 0
 Wins = 0
 Easter_egg = False
-
+activeate_game = False
 print("Yay User Input Time!")
 time.sleep(1)
 print("We are going to play Basic Rock Paper Scissors")
 
-while False: #set to false to skip the game for now
+while activeate_game: 
 
     Possible_Moves = ["Rock", "Paper", "Scissors"]
     Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
