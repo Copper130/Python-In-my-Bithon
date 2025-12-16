@@ -2,10 +2,11 @@ import os
 import time
 import random
 
-
-
 def cls():# Clears Screen planning to have it run between sections
     os.system('cls')
+
+
+
 
 # User Input!
 Losses = 0
@@ -62,6 +63,48 @@ while False: #set to false to skip the game for now
     cls()
 
 
+# Dictionaries and sets
+# Its sort of like a map in C++ Can be used to store key:value pairs
+# Like if a car comes in multiple colors to keep stuff organized
+
+MyCar = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 2006,
+  "Transmission": "5 Speed Manual",
+  "Colors": ["Red", "Black", "Yellow"]
+}
+print(MyCar)
+
+print("List of Keys for this Dictionary "+str(MyCar.keys()).replace("dict_keys([","\n").replace("])","").replace("," , "\n"))
+
+input("")
+cls()
+
+
+#Loops and stuff
+
+test = 0
+while test < 5:
+    print(f"{test}\n")
+    test += 1
+    break
+else:
+    print("Test is greater than 4 so breaking out of loop")
+    time.sleep(1)
+# The Break Function does not trigger the else statement of a loop only when the loop condition is false
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+#continue will skip the current iteration of a loop and move to the next one
+
+exit()
+
+
+'''
 
 greeting = "\nHello, This is a Python testing ground!"
 i = 1
@@ -74,7 +117,7 @@ for i in range(i,number_of_loops+1):
     time.sleep(0.2)
 print("End of the loop!")
 time.sleep(2)
-
+'''
 
 '''
 # Basic Operations 
@@ -157,13 +200,7 @@ Tuple_Loopule = ('Red', 'Green', 'Blue')
 Another_Tuple = tuple(('Circle', 'Square', 'Triangle'))
 
 
+input()
+cls()
 
 
-# Dictionaries and sets
-MyCar = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 2006,
-  "Transmission": "5 Speed Manual"
-}
-print(MyCar)
