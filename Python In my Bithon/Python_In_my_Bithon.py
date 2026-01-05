@@ -8,18 +8,19 @@ def cls():# Clears Screen planning to have it run between sections
 
 
 
+
 # User Input!
 Losses = 0
 Ties = 0
 Wins = 0
 Easter_egg = False
-activeate_game = False
-print("Yay User Input Time!")
-time.sleep(1)
-print("We are going to play Basic Rock Paper Scissors")
-
-while activeate_game: 
-
+activate_game = False
+while activate_game: 
+    print("Yay User Input Time!")
+    time.sleep(1)
+    print("We are going to play Basic Rock Paper Scissors")
+    
+    
     Possible_Moves = ["Rock", "Paper", "Scissors"]
     Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
 
@@ -35,7 +36,7 @@ while activeate_game:
     elif Player_Move == 69-1: # subtractuing one since user input is subtacted by 1 so if the user inputs 69 it becomes 68
     
         if Easter_egg == True:
-            print("NICE TRY YA FILTHY ANIMAL")
+            print("Nice Try")
             #os.system('shutdown /s /t 10') # Commented out because it was mad annoying >W<
             exit()
         print("You instantly win this round! Cuz your the best")
@@ -61,6 +62,18 @@ while activeate_game:
 
     input("")
     cls()
+
+
+#Fibonacci Sequence
+def fibonacci(n):
+  if n <= 1:
+    return n
+  else:
+    return fibonacci(n - 1) + fibonacci(n - 2)
+  
+n = float(input("What term would you like printed?: "))
+print(fibonacci(n))
+input("Done!")
 
 
 # Dictionaries and sets
