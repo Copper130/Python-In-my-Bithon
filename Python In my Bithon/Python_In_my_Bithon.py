@@ -14,7 +14,7 @@ Losses = 0
 Ties = 0
 Wins = 0
 Easter_egg = False
-activate_game = False
+activate_game = True
 while activate_game: 
     print("Yay User Input Time!")
     time.sleep(1)
@@ -22,7 +22,7 @@ while activate_game:
     
     
     Possible_Moves = ["Rock", "Paper", "Scissors"]
-    Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
+    Player_Move = int(input("Enter your move (Rock = 1 ,Paper = 2 ,Scissors = 3 ,Exit = 420. Please only type a number from 1-3): "))-1 # subtracting 1 to match list index
 
     #print(f"You Picked {Possible_Moves[int(Player_Move)]}!")
     
@@ -62,7 +62,7 @@ while activate_game:
 
     input("")
     cls()
-
+cls()
 
 #Fibonacci Sequence
 def fibonacci(n):
@@ -71,10 +71,10 @@ def fibonacci(n):
   else:
     return fibonacci(n - 1) + fibonacci(n - 2)
   
-n = float(input("What term would you like printed?: "))
+n = float(input("What term of the fibonacci sequence would you like printed?(if you go above 30 it will take a while): "))
 print(fibonacci(n))
 input("Done!")
-
+cls()
 
 # Dictionaries and sets
 # Its sort of like a map in C++ Can be used to store key:value pairs
@@ -114,7 +114,7 @@ for x in fruits:
   print(x)
 #continue will skip the current iteration of a loop and move to the next one
 
-exit()
+
 
 
 '''
@@ -189,6 +189,8 @@ Demo_List = ['Adrianna', 'Conner' , '42']
 user_list_check = input("Please enter a value(str) to check if its in the demo list: ")
 if user_list_check in Demo_List:
     print(f"{user_list_check} is in the Demo List!")
+else:
+    print(f"{user_list_check} is NOT in the Demo List!")
 print(f"{Demo_List[-1]} is the final entry in the Demo List") # indexing -1 will provide the last entry in a list
 print(Demo_List[1:2])# Outputs a range of values from the list. x:y where x is the starting index and y is the ending index (not inclusive) Can be negative too
 print("Demo List Length is:", len(Demo_List))
